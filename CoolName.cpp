@@ -1,3 +1,5 @@
+//This is just a basic outline of what the program should look like IMO. 
+
 #include <iostream>
 #include <iomain>
 using namespace std;
