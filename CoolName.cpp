@@ -5,8 +5,14 @@
 using namespace std;
 
 int main(){
+  //Variables go here
   int Input = 0;
+  
+  //User chooses which application to run
   cout << "Choose: /t1 = BMI /t2 = Retirement /t3 = Distance /t4 = Email" << endl;
+  cin >> Input >> endl;
+  
+  //Put in while loop to handle things like "ctrl+c"?
   switch(Input){
     case '1'://BMI
       
@@ -20,8 +26,9 @@ int main(){
     case '4'://Email
       
       break;
-    default:
+    default://Any input I don't like = end program.
       cout << "Wrong Choice." << endl;
+      return 0;
       break;
   }
 
