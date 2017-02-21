@@ -6,11 +6,13 @@
 #3)meters*meters=sqMeters
 #4)BMI=kg/sqMeters
 #BMI=((pounds*0.45)/((((feet*12)+inches)*0.025)^2))
+
+#Under<18.5), Normal=[18.5,25), Over=[25,30), [30<Obese
 import unittest
 
 
 class BMITests(unittest.TestCase):
-    def testNegativeInputs(self):
+    def testNegativeInputs(self):#need to test if negative heights
         self.assertEqual(1,0)
 
     def testLargeInputs(self):
