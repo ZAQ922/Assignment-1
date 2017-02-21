@@ -5,10 +5,10 @@ class distanceFormulaTests(unittest.TestCase):
 	def testNegativeInputs():
 		assertTrue(False)
 
-	def testLargeInputs()
+	def testLargeInputs():
 		assertTrue(False)
 
-	def normalInputs()
+	def normalInputs():
 		assertTrue(False)
 
 def main():
