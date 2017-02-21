@@ -11,13 +11,13 @@ import unittest
 
 class BMITests(unittest.TestCase):
     def testNegativeInputs(self):
-        assertTrue(False)
+        self.assertEqual(1,0)
 
     def testLargeInputs(self):
-        assertTrue(False)
+        self.assertEqual(1,0)
 
     def normalInputs(self):
-        assertTrue(False)
+        self.assertEqual(1,0)
 
 
 def main():
