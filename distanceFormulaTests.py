@@ -1,19 +1,9 @@
 import unittest
 
+
 class distanceFormulaTests(unittest.TestCase):
-	
-	def testNegativeInputs():
-		assertTrue(False)
-
-	def testLargeInputs():
-		assertTrue(False)
-
-	def normalInputs():
-		assertTrue(False)
-
-def main():
-	unittest.main()
-
+	def test_normalInputs(self):
+		self.assertEqual(1, 0)
 
 if __name__ == 'main__':
-	main()
+	unittest.main()
