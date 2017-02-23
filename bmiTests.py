@@ -1,13 +1,14 @@
-#height=feet and inches ((feet * 12)+ inches = totalInches)
-#weight= pounds (1 input)
-#Formula steps:
-#1)Kg=pounds*0.45
-#2)meters=totalInches * 0.025
-#3)meters*meters=sqMeters
-#4)BMI=kg/sqMeters
-#BMI=((pounds*0.45)/((((feet*12)+inches)*0.025)^2))
+'''height=feet and inches ((feet * 12)+ inches = totalInches)
+weight= pounds (1 input)
+Formula steps:
+1)Kg=pounds*0.45
+2)meters=totalInches * 0.025
+3)meters*meters=sqMeters
+4)BMI=kg/sqMeters
+BMI=((pounds*0.45)/((((feet*12)+inches)*0.025)^2))
+Under<18.5), Normal=[18.5,25), Over=[25,30), [30<Obese
+'''
 
-#Under<18.5), Normal=[18.5,25), Over=[25,30), [30<Obese
 import unittest
 
 
@@ -20,6 +21,7 @@ def BMIFormula(feet, inches, pounds):
                 meters = totalInches * 0.025
                 bmi = round((kg/(meters * meters)), 1)
                 print('BMI = ', bmi)
+                #BMI should never be below 0
                 if(bmi < 0):
                     print('BMI is a negative number')
                 if(0 <= bmi < 18.5):
@@ -40,9 +42,18 @@ def BMIFormula(feet, inches, pounds):
 
 
 class BMITests(unittest.TestCase):
-    def testNormalInputs(self):
+    def testObeseInputs(self):
+        self.assertEqual(BMIFormula(6, 1, 250), 2)
+        
+    def testOverInputs(self):
         self.assertEqual(BMIFormula(6, 1, 200), 2)
-
+        
+    def testNormalInputs(self):
+        self.assertEqual(BMIFormula(6, 1, 180), 2)
+        
+    def testUnderInputs(self):
+        self.assertEqual(BMIFormula(6, 1, 90), 2)
+        
     def testLargeInputs(self):
         self.assertEqual(BMIFormula(999999999999, 999999999999, 999999999999), 2)
 
@@ -51,6 +62,12 @@ class BMITests(unittest.TestCase):
 
     def testStringInputs(self):
         self.assertEqual(BMIFormula('bob', 'ross', 'boss'), 2)
+
+    def testPoundsInputs(self):
+        self.assertEqual(BMIFormula(6, 1, 9999), 2)
+
+    def testInchesInputs(self):
+        self.assertEqual(BMIFormula(6, 12, 180), 2)
 
 
 if __name__ == 'main__':
