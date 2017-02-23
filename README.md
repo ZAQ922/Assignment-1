@@ -10,7 +10,9 @@ Code each has to work on:
 
 Instructions:
   Download:   MainMenu.py(program to run)
-              python3.xx(program language) use python shell to run the code
+              python3.xx(program language) use the latest python shell to run the code
               *NOTE*
               pycharm/sublime text editor/IDLE for running/debugging/editing the code
               
+  It should run in a windows 10 enviroment just fine.
+  Download the required software above and run MainMenu.py in python shell.
