@@ -1,3 +1,4 @@
+import sys
 
 class main():
     def mainMenu(self):
@@ -54,6 +55,7 @@ class main():
                                     if(30 <= bmi):
                                         print('Obese')
                                         bob = False
+                                    input("Press any key to exit")
                                 else:
                                     print('0 < Pounds <= 1000!')
                             else:
@@ -63,16 +65,21 @@ class main():
 
                 if choice == 2:
                     print(choice, ": Retirement chosen")
+                    input("Press any key to exit")
 
                 if choice == 3:
                     print(choice, ": Distance chosen")
+                    input("Press any key to exit")
 
                 if choice == 4:
                     print(choice, ": Email chosen")
+                    input("Press any key to exit")
             else:
                 print('That number is not an option: 1, 2, 3, or 4')
+                input("Press any key to exit")
         else:
             print('Something went wrong.')
+            input("Press any key to exit")
         return 0
 
 
