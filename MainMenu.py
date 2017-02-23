@@ -1,4 +1,4 @@
-import sys
+
 
 class main():
     def mainMenu(self):
