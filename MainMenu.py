@@ -2,12 +2,11 @@
 
 class main():
     def mainMenu(self):
-        #Add while loop to allow multiple runs of the applications?
+        """Add while loop to allow multiple runs of the applications?"""
         print('1  :   BMI Calculator')
         print('2  :   Retirement Calculator')
         print('3  :   Distance Formula')
         print('4  :   Email Verifier')
-        """while loop for continual menu options?"""
         try:
             choice = int(input("Select an application number: "))
         except ValueError:
