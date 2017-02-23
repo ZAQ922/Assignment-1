@@ -15,6 +15,9 @@ class main():
             if (1 <= choice <= 4):
                 if choice == 1:
                     bob = True
+                    feet = 0
+                    inches = 0
+                    pounds = 0
                     while bob:
                         try:
                             feet = int(input("Please input Feet: "))
@@ -52,11 +55,11 @@ class main():
                                         print('Obese')
                                         bob = False
                                 else:
-                                    print('0 < Pounds <= 2000!')
+                                    print('0 < Pounds <= 1000!')
                             else:
                                 print('0 < Inches < 12!')
                         else:
-                            print('0 < Feet <= 1000!')
+                            print('0 < Feet <= 10!')
 
                 if choice == 2:
                     print(choice, ": Retirement chosen")
