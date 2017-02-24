@@ -1,12 +1,13 @@
+import unittest
 
 
 class main():
     def mainMenu(self):
-        """Add while loop to allow multiple runs of the applications?"""
         print('1  :   BMI Calculator')
         print('2  :   Retirement Calculator')
         print('3  :   Distance Formula')
         print('4  :   Email Verifier')
+        """while loop for continual menu options?"""
         try:
             choice = int(input("Select an application number: "))
         except ValueError:
@@ -77,6 +78,7 @@ class main():
             else:
                 print('That number is not an option: 1, 2, 3, or 4')
                 input("Press any key to exit")
+        #Should never get here
         else:
             print('Something went wrong.')
             input("Press any key to exit")
