@@ -30,7 +30,7 @@ class main():
                                 inches = int(input("Please input Inches: "))
                             except ValueError:
                                 print('Inches must be an Integer!')
-                            if (isinstance(inches, int) and (0 < inches < 12)):
+                            if (isinstance(inches, int) and (0 <= inches < 12)):
                                 try:
                                     pounds = int(input("Please input Pounds: "))
                                 except ValueError:
@@ -60,7 +60,7 @@ class main():
                                 else:
                                     print('0 < Pounds <= 1000!')
                             else:
-                                print('0 < Inches < 12!')
+                                print('0 <= Inches < 12!')
                         else:
                             print('0 < Feet <= 10!')
 
