@@ -1,4 +1,5 @@
 import unittest
+from math import sqrt
 
 
 class main():
@@ -70,6 +71,14 @@ class main():
 
                 if choice == 3:
                     print(choice, ": Distance chosen")
+                    x1 = int(input("Enter x1: "))
+                    y1 = int(input("Enter y1: "))
+                    x2 = int(input("Enter x2: "))
+                    y2 = int(input("Enter y2: "))
+                    try:
+                        print(sqrt(pow((x2-x1), 2) + pow((y2-y1), 2)))
+                    except:
+                        print("Please provide a proper input")
                     input("Press any key to exit")
 
                 if choice == 4:
