@@ -211,7 +211,6 @@ class main():
                         email = input('Input email to be tested: ')
                         while loop4:
                             try:
-
                                 useremail = re.search(r'(.*)@(.*)\.(.*)', email, re.I)
                                 useremailver1 = re.search(useremail.group(1), email, re.I)
 
@@ -223,17 +222,19 @@ class main():
 
                                 c = removespecialchar.sub('', useremail.group(3))
 
-                                if not((re.match(('[\[{}()\]\\\*]'), email))):
-                                    print("here55")
-                                    if (len(c) <= 3):
-                                        print(email, " is a valid email!")
-                                        loop4 = False
-                                    else:
-                                        print("Invalid domain extention: must be three letters or less")
-                                        loop4 = False
+                                    if not ((re.match(('[\[{}()\]\\\*]'), email))):
+                                        if (len(c) <= 3):
+                                            print(email, " is a valid email!")
+                                            loop4 = False
+                                            return True
+                                        else:
+                                            print(c, "is and invalid domain extention: it must be three letters or less.")
+                                            loop4 = False
+                                            return False
+
                             except:
-                                print("Not a valid email")
-                                loop4 = False
+                                print(email, "is not a valid email")
+                                return False
 
 
 
